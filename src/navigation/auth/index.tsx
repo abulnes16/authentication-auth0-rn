@@ -1,11 +1,23 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { NATIVE_LOGIN_SCREEN, WELCOME_SCREEN } from '../screens-names';
+import { NativeLoginScreen, WelcomeScreen } from '../../screens';
+
+const AuthStack = createNativeStackNavigator<AuthStackParams>();
 
 const AuthNavigator = () => {
   return (
-    <View>
-      <Text>AuthNavigator</Text>
-    </View>
+    <AuthStack.Navigator initialRouteName={WELCOME_SCREEN}>
+      <AuthStack.Screen
+        options={{ headerShown: false }}
+        name={WELCOME_SCREEN}
+        component={WelcomeScreen}
+      />
+      <AuthStack.Screen
+        name={NATIVE_LOGIN_SCREEN}
+        component={NativeLoginScreen}
+      />
+    </AuthStack.Navigator>
   );
 };
 
