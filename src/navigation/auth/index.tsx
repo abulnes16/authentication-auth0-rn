@@ -1,7 +1,8 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NATIVE_LOGIN_SCREEN, WELCOME_SCREEN } from '../screens-names';
-import { NativeLoginScreen, WelcomeScreen } from '../../screens';
+import { NativeLoginScreen, WelcomeScreen } from 'screens';
+import { colors, navigationStyles } from 'theme';
 
 const AuthStack = createNativeStackNavigator<AuthStackParams>();
 
@@ -14,6 +15,11 @@ const AuthNavigator = () => {
         component={WelcomeScreen}
       />
       <AuthStack.Screen
+        options={{
+          title: 'Native Login',
+          headerStyle: navigationStyles.header,
+          headerTintColor: colors.white,
+        }}
         name={NATIVE_LOGIN_SCREEN}
         component={NativeLoginScreen}
       />
