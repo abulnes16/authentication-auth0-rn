@@ -15,6 +15,7 @@ module.exports = {
           modules: './src/modules/index',
           assets: './src/assets/index',
           types: './src/@types/index',
+          store: "'./src/store/index",
         },
         extensions: ['.ts', '.tsx'],
       },
