@@ -4,12 +4,14 @@ import { WelcomeScreenProps } from 'types';
 import { MainButton, Screen } from 'components';
 import { LOGO } from 'assets';
 import { titleStyles } from 'theme';
+import { useAuth } from 'hooks';
 
 interface WelcomeProps extends WelcomeScreenProps {}
 
 const Welcome: React.FC<WelcomeProps> = ({ navigation }) => {
   const { navigate } = navigation;
   const onNativeLogin = () => navigate('NativeLoginScreen');
+  const { webLogin } = useAuth();
 
   return (
     <Screen>
@@ -17,7 +19,7 @@ const Welcome: React.FC<WelcomeProps> = ({ navigation }) => {
       <Text style={titleStyles.title}>
         Authentication with Auth0 and React Native
       </Text>
-      <MainButton text="Browser based" />
+      <MainButton text="Browser based" onPress={webLogin} />
       <MainButton text="Native Login" onPress={onNativeLogin} />
     </Screen>
   );

@@ -1,9 +1,15 @@
 import React from 'react';
+import { useAuth } from 'hooks';
 import AuthNavigator from './auth';
 import HomeNavigator from './home';
 
 const MainNavigator = () => {
-  // TODO: Add conditional for change navigator
+  const { isLoggedIn } = useAuth();
+
+  if (isLoggedIn) {
+    return <HomeNavigator />;
+  }
+
   return <AuthNavigator />;
 };
 
