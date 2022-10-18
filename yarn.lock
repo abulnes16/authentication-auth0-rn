@@ -1516,6 +1516,11 @@
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.5.tgz#5f19d2b85a98e9558036f6a3cacc8819420f05cf"
   integrity sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==
 
+"@types/react-native-auth0@^2.13.1":
+  version "2.13.1"
+  resolved "https://registry.yarnpkg.com/@types/react-native-auth0/-/react-native-auth0-2.13.1.tgz#62c1f1b036e980da299606867ba995db74000125"
+  integrity sha512-PBK4BFU8qjcPoMcouzIPaKCAyt0JZZT1ECx1rXkm2hyN5icNC6CE56JGT/KQtsf68fevLUhZGxwbmnBnRXb5zA==
+
 "@types/react-native@^0.70.4":
   version "0.70.5"
   resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.70.5.tgz#f963d6921deb901dc2be8b96d9179a77b5406a23"
